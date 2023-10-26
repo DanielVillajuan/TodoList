@@ -10,6 +10,15 @@ describe('<TodoContainer />', (): void => {
             </TodoProvider>)
     })
 
+    test('render component TodoContainer', (): void => {
+        const { container } = render(
+            <TodoProvider>
+                <TodoContainer />
+            </TodoProvider>
+        )
+        expect(container).toBeDefined()
+    })
+
     test('show title', (): void => {
         expect(screen.getByText('Lista de tareas')).toBeDefined()
     })

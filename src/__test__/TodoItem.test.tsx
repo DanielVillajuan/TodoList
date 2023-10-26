@@ -3,6 +3,16 @@ import TodoItem from "../components/TodoItem"
 import TodoProvider from "../context/TodoContext"
 
 describe('<TodoItem />',(): void => {
+
+    test('show render', (): void => {
+        const { container } = render(
+            <TodoProvider >
+                <TodoItem title="Task" category_id="123" />
+            </TodoProvider>
+        )
+        expect(container).toBeDefined();
+    })
+
     test('show title',(): void => {
         render(
             <TodoProvider >
