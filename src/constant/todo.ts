@@ -1,18 +1,5 @@
-import { ErrorType, TodoType } from "../types/Todo";
+import { TodoType } from "../types/Todo";
 import * as yup from 'yup'
-
-export const TODO_EMPTY: TodoType = {
-    id: "",
-    description: "",
-    title: "",
-    category_id: "",
-    completed: false,
-}
-
-export const ERROR_EMPTY: ErrorType = {
-    title: "",
-    category_id: ""
-}
 
 export const initialValues: TodoType = {
     title: '',
